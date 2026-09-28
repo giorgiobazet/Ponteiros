@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Memória Avançado - Ponteiros em C</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h2>Simulador Interativo de Memória e Ponteiros</h2>
+        <p>Crie variáveis, instancie ponteiros e execute comandos C reais para manipular a memória.</p>
+    </header>
+
+    <div class="container">
+        <!-- Painel de Configuração -->
+        <div class="panel setup-panel">
+            <h3>1. Declarar na Memória</h3>
+            <div class="input-group">
+                <input type="text" id="var-name" placeholder="Nome (ex: x)" maxlength="10">
+                <input type="number" id="var-value" placeholder="Valor (ex: 10)">
+                <button onclick="addVariable()">Criar Variável (int)</button>
+            </div>
+            <div class="input-group mt-15">
+                <input type="text" id="ptr-name" placeholder="Nome (ex: px)" maxlength="10">
+                <button onclick="addPointer()" class="btn-alt">Criar Ponteiro (int*)</button>
+            </div>
+        </div>
+
+        <!-- Painel de Execução -->
+        <div class="panel execution-panel">
+            <h3>2. Executar Comando C</h3>
+            <p class="hint">Exemplos: <code>px = &amp;x;</code> | <code>*px = 50;</code> | <code>y = *px;</code> | <code>py = px;</code></p>
+            <div class="command-box">
+                <span>></span>
+                <input type="text" id="cmd-input" placeholder="Digite a instrução em C..." onkeydown="if(event.key === 'Enter') executeCommand()">
+                <button onclick="executeCommand()">Executar</button>
+            </div>
+            
+            <div class="log-container" id="log-container">
+            </div>
+        </div>
+    </div>
+
+    <h3 class="board-title">Placa de Memória RAM</h3>
+    <div class="memory-board" id="memory-board">
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
