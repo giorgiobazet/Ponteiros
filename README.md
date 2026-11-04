@@ -1,5 +1,7 @@
 # Simulador de Memória e Ponteiros em C
 
+🔗 **Demo ao vivo:** https://giorgiobazet.github.io/Ponteiros/
+
 Simulador interativo para visualizar como variáveis e ponteiros funcionam na memória, feito com HTML, CSS e JavaScript puro.
 
 ## Como usar
